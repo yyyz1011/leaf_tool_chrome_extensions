@@ -11,6 +11,11 @@ const routes: RouteItem[] = [
     path: '/',
     name: 'overview',
     component: () => import('@/views/overview/Overview.vue')
+  },
+  {
+    path: '/search',
+    name: 'overview-search',
+    component: () => import('@/views/overview/OverviewSearch.vue')
   }
 ];
 

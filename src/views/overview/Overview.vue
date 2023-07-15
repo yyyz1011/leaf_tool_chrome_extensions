@@ -1,10 +1,24 @@
 <script setup lang="ts">
 import { NavBar, Cell, CellGroup } from 'vant';
 import { toolList } from '@/consts/overview';
+import SearchIcon from '@/assets/icon/search.png';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+function handleGoSearch() {
+  router.push({
+    name: 'overview-search'
+  });
+}
 </script>
 
 <template>
-  <NavBar title="LeafTool工具库"></NavBar>
+  <NavBar title="LeafTool工具库">
+    <template #right>
+      <img class="search-icon" :src="SearchIcon" @click="handleGoSearch" />
+    </template>
+  </NavBar>
   <CellGroup v-for="item in toolList" :key="item.key" :title="item.title">
     <Cell
       v-for="cItem in item.children"
@@ -15,3 +29,11 @@ import { toolList } from '@/consts/overview';
     ></Cell>
   </CellGroup>
 </template>
+
+<style lang="scss" scoped>
+.search-icon {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+</style>
