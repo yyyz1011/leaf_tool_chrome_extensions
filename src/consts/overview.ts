@@ -36,28 +36,28 @@ export const toolList: ToolItem[] = [
       }
     ]
   },
-  {
-    key: 'encrypt',
-    title: '加解密操作',
-    children: [
-      {
-        key: 'md5',
-        title: 'md5加密解密TODO',
-        to: ''
-      }
-    ]
-  },
-  {
-    key: 'text-format',
-    title: '文本格式化',
-    children: [
-      {
-        key: 'json',
-        title: 'jsonTODO',
-        to: ''
-      }
-    ]
-  },
+  // {
+  //   key: 'encrypt',
+  //   title: '加解密操作',
+  //   children: [
+  //     {
+  //       key: 'md5',
+  //       title: 'md5加密解密TODO',
+  //       to: ''
+  //     }
+  //   ]
+  // },
+  // {
+  //   key: 'text-format',
+  //   title: '文本格式化',
+  //   children: [
+  //     {
+  //       key: 'json',
+  //       title: 'jsonTODO',
+  //       to: ''
+  //     }
+  //   ]
+  // },
   {
     key: 'time',
     title: '时间戳',
