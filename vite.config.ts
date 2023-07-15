@@ -59,12 +59,21 @@ export default ({ mode, command }) => {
       rollupOptions: {
         input: {
           main: resolve(__dirname, './src/index.html')
-          // options: resolve(__dirname, './src/options.html')
         },
         output: {
           chunkFileNames: 'static/js/[name]-[hash].js',
           entryFileNames: 'static/js/[name]-[hash].js',
           assetFileNames: 'static/[ext]/name-[hash].[ext]'
+        },
+        manualChunks: {
+          overview: [
+            './src/views/overview/Overview.vue',
+            './src/views/overview/OverviewSearch.vue'
+          ],
+          toolFormat: [
+            './src/views/tool/FormatHump.vue',
+            './src/views/tool/FormatUnderline.vue'
+          ]
         }
       }
     }

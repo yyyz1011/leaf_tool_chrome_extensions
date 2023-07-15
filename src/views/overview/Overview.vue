@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { NavBar, Cell, CellGroup } from 'vant';
+import { useRouter } from 'vue-router';
 import { toolList } from '@/consts/overview';
 import SearchIcon from '@/assets/icon/search.png';
-import { useRouter } from 'vue-router';
 
 const router = useRouter();
 

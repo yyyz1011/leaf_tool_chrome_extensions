@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
-import App from './App.vue';
 import { ConfigProvider } from 'vant';
+import App from './App.vue';
 import '@/assets/scss/common.scss';
 import 'vant/lib/index.css';
 import router from '@/router';

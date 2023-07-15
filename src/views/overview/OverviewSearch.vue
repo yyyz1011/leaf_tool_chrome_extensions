@@ -6,12 +6,13 @@ import pinyin from 'pinyin';
 import { debounce } from 'lodash-es';
 import BackNavigateIcon from '@/assets/icon/back_navigate.png';
 import { toolList } from '@/consts/overview';
+import Header from '@/components/basic/Header.vue';
+
+const router = useRouter();
 
 const searchVal = ref('');
 const list = ref<any>([]);
 const searchList = ref<any>([]);
-
-const router = useRouter();
 
 watch(
   () => searchVal.value,
@@ -63,11 +64,7 @@ const hasSearchData = computed(
 </script>
 
 <template>
-  <NavBar title="工具搜索">
-    <template #left>
-      <img :src="BackNavigateIcon" class="back-icon" @click="handleBack" />
-    </template>
-  </NavBar>
+  <Header title="工具搜索"></Header>
   <Search v-model="searchVal" placeholder="请输入搜索功能"></Search>
 
   <div v-if="hasSearchData">
