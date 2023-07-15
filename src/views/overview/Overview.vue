@@ -14,7 +14,7 @@ function handleGoSearch() {
 </script>
 
 <template>
-  <NavBar title="LeafTool工具库">
+  <NavBar fixed placeholder safe-area-inset-top title="LeafTool工具库">
     <template #right>
       <img class="search-icon" :src="SearchIcon" @click="handleGoSearch" />
     </template>
@@ -28,6 +28,15 @@ function handleGoSearch() {
       :to="cItem.to"
     ></Cell>
   </CellGroup>
+  <div class="bottom-tip">
+    到底啦，更多功能请联系
+    <a
+      href="https://github.com/yyyz1011/leaf_tool_chrome_extensions/issues"
+      target="_blank"
+    >
+      开发者打工人
+    </a>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -35,5 +44,14 @@ function handleGoSearch() {
   width: 15px;
   height: 15px;
   cursor: pointer;
+}
+
+.bottom-tip {
+  color: #969799;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  padding: 8px 0 16px;
 }
 </style>

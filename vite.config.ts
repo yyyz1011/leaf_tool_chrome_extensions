@@ -68,11 +68,11 @@ export default ({ mode, command }) => {
         manualChunks: {
           overview: [
             './src/views/overview/Overview.vue',
-            './src/views/overview/OverviewSearch.vue'
-          ],
-          toolFormat: [
+            './src/views/overview/OverviewSearch.vue',
             './src/views/tool/FormatHump.vue',
-            './src/views/tool/FormatUnderline.vue'
+            './src/views/tool/FormatUnderline.vue',
+            './src/views/tool/FormatLowerCase.vue',
+            './src/views/tool/FormatUpperCase.vue'
           ]
         }
       }
