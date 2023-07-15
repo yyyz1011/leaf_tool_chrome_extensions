@@ -12,6 +12,7 @@
   "dependencies": {
     "@metamask/post-message-stream": "^6.1.1",
     "@metamask/providers": "^10.2.1",
+    "dayjs": "^1.11.9",
     "lodash-es": "^4.17.21",
     "loglevel": "^1.8.1",
     "metamask-extension-provider": "^3.0.0",

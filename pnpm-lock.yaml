@@ -8,6 +8,7 @@ specifiers:
   '@types/post-message-stream': ^3.0.1
   '@typescript-eslint/parser': ^5.55.0
   '@vitejs/plugin-vue': ^4.1.0
+  dayjs: ^1.11.9
   eslint: ^8.36.0
   eslint-config-airbnb-base: ^15.0.0
   eslint-config-prettier: ^8.7.0
@@ -36,6 +37,7 @@ specifiers:
 dependencies:
   '@metamask/post-message-stream': 6.1.1
   '@metamask/providers': 10.2.1
+  dayjs: 1.11.9
   lodash-es: 4.17.21
   loglevel: 1.8.1
   metamask-extension-provider: 3.0.0
@@ -1465,6 +1467,10 @@ packages:
 
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
+
+  /dayjs/1.11.9:
+    resolution: {integrity: sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==}
+    dev: false
 
   /de-indent/1.0.2:
     resolution: {integrity: sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==}

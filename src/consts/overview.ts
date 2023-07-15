@@ -64,8 +64,13 @@ export const toolList: ToolItem[] = [
     children: [
       {
         key: 'time-format',
-        title: '时间戳转换',
-        to: ''
+        title: '时间转时间戳',
+        to: 'tool-format-time'
+      },
+      {
+        key: 'time-format-unix',
+        title: '时间戳转时间',
+        to: 'tool-format-time-unix'
       }
     ]
   }

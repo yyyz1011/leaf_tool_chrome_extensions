@@ -47,7 +47,7 @@ function handleGoSearch() {
 }
 
 .bottom-tip {
-  color: #969799;
+  color: $primary-color;
   display: flex;
   justify-content: center;
   align-items: center;

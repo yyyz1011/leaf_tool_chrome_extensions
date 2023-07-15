@@ -4,6 +4,10 @@
   background-color: #f1f1f1;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body,
 ul,
 ol,

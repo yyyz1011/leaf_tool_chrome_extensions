@@ -36,6 +36,16 @@ const routes: RouteItem[] = [
     path: '/tool-format-lower-case',
     name: 'tool-format-lower-case',
     component: () => import('@/views/tool/FormatLowerCase.vue')
+  },
+  {
+    path: '/tool-format-time',
+    name: 'tool-format-time',
+    component: () => import('@/views/tool/FormatTime.vue')
+  },
+  {
+    path: '/tool-format-time-unix',
+    name: 'tool-format-time-unix',
+    component: () => import('@/views/tool/FormatTimeUnix.vue')
   }
 ];
 
