@@ -1,8 +1,8 @@
 const manifest = {
   manifest_version: 3,
   homepage_url: 'https://demo.xxx.com',
-  name: 'chome  extension demo ',
-  description: 'This is a demo',
+  name: 'leaf_tool_chrome_extensions',
+  description: 'leaf_tool_chrome_extensions',
   version: '1.0',
   icons: {
     '16': 'icon/icon-16.png',

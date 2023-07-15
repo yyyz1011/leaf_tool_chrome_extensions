@@ -1,6 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
-const routes = [
+interface RouteItem {
+  path: string;
+  name: string;
+  component: any;
+}
+
+const routes: RouteItem[] = [
   {
     path: '/',
     name: 'overview',
