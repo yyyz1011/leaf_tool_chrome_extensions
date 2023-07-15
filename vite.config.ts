@@ -12,7 +12,7 @@ export default ({ mode, command }) => {
   console.log(mode, command);
   return defineConfig({
     root: './src/',
-    base: '/',
+    base: './',
     envDir: '../',
     publicDir: '../public',
     plugins: [
