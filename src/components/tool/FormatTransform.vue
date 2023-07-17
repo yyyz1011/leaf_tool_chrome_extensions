@@ -15,6 +15,10 @@ const props = defineProps({
   transformFunc: {
     type: Function,
     default: () => {}
+  },
+  fieldProps: {
+    type: Object,
+    default: () => ({})
   }
 });
 
@@ -30,6 +34,7 @@ function onSubmit(values: any) {
   <Form @submit="onSubmit">
     <Field
       v-model="input"
+      v-bind="props.fieldProps"
       name="input"
       :label="props.title"
       :placeholder="`请填写${props.title}`"
@@ -41,12 +46,14 @@ function onSubmit(values: any) {
   </Form>
   <Cell class="res-content" :title="`${props.submitText}结果`">
     <template #label>
-      <div class="content">
-        {{ res || '暂无结果' }}
-        <Button v-if="res" size="small" @click="() => handleCopy(res)">
-          复制
-        </Button>
-      </div>
+      <slot name="res-content" :res="res">
+        <div class="content">
+          {{ res || '暂无结果' }}
+          <Button v-if="res" size="small" @click="() => handleCopy(res)">
+            复制
+          </Button>
+        </div>
+      </slot>
     </template>
   </Cell>
 </template>

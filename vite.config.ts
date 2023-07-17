@@ -74,7 +74,8 @@ export default ({ mode, command }) => {
             './src/views/tool/FormatLowerCase.vue',
             './src/views/tool/FormatUpperCase.vue',
             './src/views/tool/FormatTime.vue',
-            './src/views/tool/FormatTimeUnix.vue'
+            './src/views/tool/FormatTimeUnix.vue',
+            './src/views/tool/FormatTextJson.vue'
           ]
         }
       }

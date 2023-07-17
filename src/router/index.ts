@@ -46,6 +46,11 @@ const routes: RouteItem[] = [
     path: '/tool-format-time-unix',
     name: 'tool-format-time-unix',
     component: () => import('@/views/tool/FormatTimeUnix.vue')
+  },
+  {
+    path: '/tool-format-text-json',
+    name: 'tool-format-text-json',
+    component: () => import('@/views/tool/FormatTextJson.vue')
   }
 ];
 

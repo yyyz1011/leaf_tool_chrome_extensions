@@ -47,17 +47,17 @@ export const toolList: ToolItem[] = [
   //     }
   //   ]
   // },
-  // {
-  //   key: 'text-format',
-  //   title: '文本格式化',
-  //   children: [
-  //     {
-  //       key: 'json',
-  //       title: 'jsonTODO',
-  //       to: ''
-  //     }
-  //   ]
-  // },
+  {
+    key: 'text-format',
+    title: '文本格式化',
+    children: [
+      {
+        key: 'json',
+        title: 'json格式化',
+        to: 'tool-format-text-json'
+      }
+    ]
+  },
   {
     key: 'time',
     title: '时间戳',

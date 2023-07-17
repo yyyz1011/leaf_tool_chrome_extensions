@@ -20,6 +20,7 @@
     "post-message-stream": "^3.0.0",
     "vant": "^4.6.2",
     "vue": "^3.2.47",
+    "vue-json-viewer": "3",
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
