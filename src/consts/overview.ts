@@ -2,11 +2,13 @@ interface ToolChildrenItem {
   key: string;
   title: string;
   to: string;
+  desc?: string;
 }
 interface ToolItem {
   key: string;
   title: string;
   children: ToolChildrenItem[];
+  desc?: string;
 }
 
 export const toolList: ToolItem[] = [
