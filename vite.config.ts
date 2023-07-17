@@ -69,6 +69,7 @@ export default ({ mode, command }) => {
           overview: [
             './src/views/overview/Overview.vue',
             './src/views/overview/OverviewSearch.vue',
+            './src/views/overview/OverviewSub.vue',
             './src/views/tool/FormatHump.vue',
             './src/views/tool/FormatUnderline.vue',
             './src/views/tool/FormatLowerCase.vue',
