@@ -5,7 +5,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - master
 
 # 默认shell
 defaults:
