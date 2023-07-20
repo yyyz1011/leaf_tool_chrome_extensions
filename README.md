@@ -1,24 +1,29 @@
-# leaf_tool_chrome_extensions
+# LeafTool(WIP)
 
-> 谷歌浏览器插件-LeafTool 工具库
+LeafTool is a Google Chrome extension designed to offer string processing, encryption and decryption tools, data generation tools, and format conversion, encoding, and decoding operations. Whether you're a developer or a regular user, LeafTool can help you enhance your productivity and optimize your browser experience.
 
-![avatar](./public/img/readMe.png)
+[English](./README.md) | [简体中文](./README-zh_CN.md)
 
-# 使用方式
+## Key Features
 
-1. 下载仓库的`dist`文件夹至本地
-2. 打开谷歌浏览器->扩展程序->管理扩展程序
-3. 点击 加载已解压的扩展程序，选中`dist`文件夹加载即可
+* **String Processing** - LeafTool comes with a variety of string processing tools that assist you in easily replacing, splitting, and merging strings.
 
-# 功能
+* **Encryption and Decryption Tools** - LeafTool offers a range of encryption and decryption tools such as MD5, SHA1, Base64, etc.
 
-- 命名格式转换
-  - 下划线转驼峰
-  - 驼峰转下划线
-  - 变量转大写
-  - 变量转小写
-- 文本格式化
-  - json 格式化
-- 时间戳
-  - 时间转时间戳
-  - 时间戳转时间
+* **Data Generation Tools** - LeafTool allows you to quickly and conveniently generate various types of test data, such as UUID, random numbers, random characters, etc.
+
+* **Format Conversion, Encoding and Decoding Operations** - LeafTool supports conversion between various formats such as JSON, XML, CSV, etc., and provides encoding and decoding operations.
+
+## Installation
+
+You can download LeafTool from our GitHub repository [https://github.com/yyyz1011/leaf_tool_chrome_extensions](https://github.com/yyyz1011/leaf_tool_chrome_extensions). After downloading, simply load the dist folder in the extension tools of Google Chrome.
+
+## Usage
+
+After installing LeafTool, you can click on the LeafTool icon on the browser toolbar to open the extension. Then, you can customize settings on the extension's settings page, or use developer tools on the extension's tools page.
+
+## Feedback
+
+If you encounter any issues while using LeafTool, or if you have any suggestions or comments, feel free to provide feedback through our feedback system. You can also leave a message on our GitHub page [https://github.com/yyyz1011/leaf_tool_chrome_extensions/issues](https://github.com/yyyz1011/leaf_tool_chrome_extensions/issues). If you have new feature requests, please leave a message there, and we will consider and implement them as soon as possible.
+
+Start using LeafTool and elevate your browser experience!

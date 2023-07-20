@@ -8,11 +8,17 @@ const props = defineProps({
   title: {
     type: String,
     default: ''
+  },
+  back: {
+    type: String,
+    default: 'overview'
   }
 });
 
 function handleBack() {
-  router.back();
+  router.push({
+    name: props.back
+  });
 }
 </script>
 
