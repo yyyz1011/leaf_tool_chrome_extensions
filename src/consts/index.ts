@@ -1,0 +1,1 @@
+export const ROUTER_STORAGE_KEY = 'LEAF_TOOL_ROUTER_KEY';
