@@ -1,16 +1,17 @@
-interface ToolChildrenItem {
-  key: string;
+// 收藏功能storage_key
+export const STORAGE_KEY = 'LEAF_TOOL_OVERVIEW_COLLECT_LIST';
+
+export interface ToolChildrenItem {
+  key: string; // 这个key需要全局唯一，子集和父级不能重复
   title: string;
   desc?: string;
   to: string;
-  desc?: string;
 }
-interface ToolItem {
+export interface ToolItem {
   key: string;
   title: string;
   desc?: string;
   children: ToolChildrenItem[];
-  desc?: string;
 }
 
 export const toolList: ToolItem[] = [

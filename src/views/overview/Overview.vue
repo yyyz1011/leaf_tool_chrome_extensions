@@ -1,10 +1,33 @@
 <script setup lang="ts">
-import { NavBar, Cell, CellGroup } from 'vant';
+import { ref } from 'vue';
+import { NavBar } from 'vant';
 import { useRouter } from 'vue-router';
-import { toolList } from '@/consts/overview';
+import { toolList, STORAGE_KEY } from '@/consts/overview';
+import type { ToolChildrenItem } from '@/consts/overview';
 import SearchIcon from '@/assets/icon/search.png';
+import OverviewCard from '@/components/overview/OverviewCard.vue';
+import NewFeatureTip from '@/components/basic/NewFeatureTip.vue';
 
 const router = useRouter();
+
+const list = ref<ToolChildrenItem[]>([]);
+
+function initList() {
+  const collectItem: ToolChildrenItem[] = [];
+  const noCollectItem: ToolChildrenItem[] = [];
+  const collectStorageList = JSON.parse(
+    localStorage.getItem(STORAGE_KEY) ?? '[]'
+  );
+  toolList.forEach((item: any) => {
+    if (collectStorageList.find((key: string) => key === item.key)) {
+      collectItem.push(item);
+    } else {
+      noCollectItem.push(item);
+    }
+  });
+  list.value = [...collectItem, ...noCollectItem];
+}
+initList();
 
 function handleGoSearch() {
   router.push({
@@ -19,24 +42,10 @@ function handleGoSearch() {
       <img class="search-icon" :src="SearchIcon" @click="handleGoSearch" />
     </template>
   </NavBar>
-  <CellGroup v-for="item in toolList" :key="item.key" :title="item.title">
-    <Cell
-      v-for="cItem in item.children"
-      :key="cItem.key"
-      :title="cItem.title"
-      is-link
-      :to="cItem.to"
-    ></Cell>
-  </CellGroup>
-  <div class="bottom-tip">
-    到底啦，更多功能请联系
-    <a
-      href="https://github.com/yyyz1011/leaf_tool_chrome_extensions/issues"
-      target="_blank"
-    >
-      开发者打工人
-    </a>
+  <div v-for="(item, index) in list" :key="item.key" class="overview-wrapper">
+    <OverviewCard :info="item" :index="index + 1"></OverviewCard>
   </div>
+  <NewFeatureTip></NewFeatureTip>
 </template>
 
 <style lang="scss" scoped>
@@ -46,12 +55,7 @@ function handleGoSearch() {
   cursor: pointer;
 }
 
-.bottom-tip {
-  color: $primary-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10px;
-  padding: 8px 0 16px;
+.overview-wrapper {
+  margin-top: 12px;
 }
 </style>

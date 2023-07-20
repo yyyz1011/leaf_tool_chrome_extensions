@@ -18,6 +18,11 @@ const routes: RouteItem[] = [
     component: () => import('@/views/overview/OverviewSearch.vue')
   },
   {
+    path: '/overview-sub',
+    name: 'overview-sub',
+    component: () => import('@/views/overview/OverviewSub.vue')
+  },
+  {
     path: '/tool-format-underline',
     name: 'tool-format-underline',
     component: () => import('@/views/tool/FormatUnderline.vue')
