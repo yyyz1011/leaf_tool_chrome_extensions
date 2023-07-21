@@ -70,7 +70,6 @@ export default ({ mode, command }) => {
             './src/views/overview/Overview.vue',
             './src/views/overview/OverviewSearch.vue',
             './src/views/overview/OverviewSub.vue',
-            './src/views/format/FormatNamingConvertor.vue',
             //
             './src/views/tool/FormatTime.vue',
             './src/views/tool/FormatTimeUnix.vue',
