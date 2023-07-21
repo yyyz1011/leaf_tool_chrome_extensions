@@ -7,7 +7,7 @@ export function formatStringTest() {}
  * @param str
  * @returns str
  */
-export function formatHump2Underline(str: string): string {
+export function formatToUnderline(str: string): string {
   let temp = str.replace(/[A-Z]/g, (match) => {
     return `_${match.toLowerCase()}`;
   });
@@ -23,7 +23,7 @@ export function formatHump2Underline(str: string): string {
  * @param str
  * @returns str
  */
-export function formatUnderLine2Hump(str: string): string {
+export function formatToHump(str: string): string {
   return str.replace(/([^_])(?:_+([^_]))/g, ($0, $1, $2) => {
     return $1 + $2.toUpperCase();
   });
@@ -34,7 +34,7 @@ export function formatUnderLine2Hump(str: string): string {
  * @param str
  * @returns str
  */
-export function formatStr2UpperCase(str: string): string {
+export function formatToUpperCase(str: string): string {
   return str.toUpperCase();
 }
 
@@ -43,6 +43,6 @@ export function formatStr2UpperCase(str: string): string {
  * @param str
  * @returns str
  */
-export function formatStr2LowerCase(str: string): string {
+export function formatToLowerCase(str: string): string {
   return str.toLowerCase();
 }
