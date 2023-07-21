@@ -18,25 +18,21 @@ const routes: RouteItem[] = [
     component: () => import('@/views/overview/OverviewSearch.vue')
   },
   {
-    path: '/tool-format-underline',
-    name: 'tool-format-underline',
-    component: () => import('@/views/tool/FormatUnderline.vue')
+    path: '/overview-sub',
+    name: 'overview-sub',
+    component: () => import('@/views/overview/OverviewSub.vue')
   },
   {
-    path: '/tool-format-hump',
-    name: 'tool-format-hump',
-    component: () => import('@/views/tool/FormatHump.vue')
+    path: '/format-naming-convertor',
+    name: 'naming-convertor',
+    component: () => import('@/views/format/FormatNamingConvertor.vue')
   },
   {
-    path: '/tool-format-upper-case',
-    name: 'tool-format-upper-case',
-    component: () => import('@/views/tool/FormatUpperCase.vue')
+    path: '/format-path-convertor',
+    name: 'path-convertor',
+    component: () => import('@/views/format/FormatPathConvertor.vue')
   },
-  {
-    path: '/tool-format-lower-case',
-    name: 'tool-format-lower-case',
-    component: () => import('@/views/tool/FormatLowerCase.vue')
-  },
+  // 以下路由废弃
   {
     path: '/tool-format-time',
     name: 'tool-format-time',

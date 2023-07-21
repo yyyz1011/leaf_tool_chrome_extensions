@@ -69,10 +69,10 @@ export default ({ mode, command }) => {
           overview: [
             './src/views/overview/Overview.vue',
             './src/views/overview/OverviewSearch.vue',
-            './src/views/tool/FormatHump.vue',
-            './src/views/tool/FormatUnderline.vue',
-            './src/views/tool/FormatLowerCase.vue',
-            './src/views/tool/FormatUpperCase.vue',
+            './src/views/overview/OverviewSub.vue',
+            './src/views/format/FormatNamingConvertor.vue',
+            './src/views/format/FormatPathConvertor.vue',
+            //
             './src/views/tool/FormatTime.vue',
             './src/views/tool/FormatTimeUnix.vue',
             './src/views/tool/FormatTextJson.vue'

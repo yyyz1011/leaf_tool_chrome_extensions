@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "watch": "vue-tsc && vite build --watch",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "changeset": "changeset",
+    "version": "changeset version && pnpm install"
   },
   "dependencies": {
     "@metamask/post-message-stream": "^6.1.1",
@@ -24,6 +26,8 @@
     "vue-router": "^4.2.4"
   },
   "devDependencies": {
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2",
     "@samrum/vite-plugin-web-extension": "^3.1.1",
     "@types/lodash-es": "^4.17.8",
     "@types/post-message-stream": "^3.0.1",

@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import { NavBar, Search, Empty, CellGroup, Cell } from 'vant';
-import { useRouter } from 'vue-router';
+import { Search, Empty, CellGroup, Cell } from 'vant';
 import { ref, watch, computed } from 'vue';
 import pinyin from 'pinyin';
 import { debounce } from 'lodash-es';
-import BackNavigateIcon from '@/assets/icon/back_navigate.png';
 import { toolList } from '@/consts/overview';
 import Header from '@/components/basic/Header.vue';
-
-const router = useRouter();
 
 const searchVal = ref('');
 const list = ref<any>([]);
@@ -48,12 +44,6 @@ function initToolList() {
   list.value = resList;
 }
 initToolList();
-
-function handleBack() {
-  router.push({
-    name: 'overview'
-  });
-}
 
 const isNoSearchData = computed(
   () => searchVal.value && searchList.value.length === 0

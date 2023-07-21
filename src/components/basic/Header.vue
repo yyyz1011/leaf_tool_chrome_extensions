@@ -8,16 +8,22 @@ const props = defineProps({
   title: {
     type: String,
     default: ''
+  },
+  back: {
+    type: String,
+    default: 'overview'
   }
 });
 
 function handleBack() {
-  router.back();
+  router.push({
+    name: props.back
+  });
 }
 </script>
 
 <template>
-  <NavBar :title="props.title">
+  <NavBar :title="props.title" fixed placeholder>
     <template #left>
       <img :src="BackNavigateIcon" class="back-icon" @click="handleBack" />
     </template>
