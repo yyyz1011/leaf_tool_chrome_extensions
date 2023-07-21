@@ -46,3 +46,25 @@ export function formatToUpperCase(str: string): string {
 export function formatToLowerCase(str: string): string {
   return str.toLowerCase();
 }
+
+export interface FormatPathInfoResp {
+  path: string;
+  pathName: string;
+  fileName: string;
+}
+/**
+ * 获取路径信息
+ * @param filePath
+ * @returns FormatPathInfoResp
+ */
+export function formatPathInfo(filePath: string): FormatPathInfoResp {
+  const normalizedPath = filePath.replace(/\\/g, '/');
+  const pathParts = normalizedPath.split('/');
+  const fileName = pathParts.pop() ?? '';
+  const pathName = pathParts.join('/');
+  return {
+    path: normalizedPath,
+    pathName,
+    fileName
+  };
+}
