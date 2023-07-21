@@ -5,6 +5,9 @@ import pinyin from 'pinyin';
 import { debounce } from 'lodash-es';
 import { toolList } from '@/consts/overview';
 import Header from '@/components/basic/Header.vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const searchVal = ref('');
 const list = ref<any>([]);
@@ -51,6 +54,12 @@ const isNoSearchData = computed(
 const hasSearchData = computed(
   () => searchVal.value && searchList.value.length > 0
 );
+
+function handleGoFeature(pathName: string) {
+  router.push({
+    name: pathName
+  });
+}
 </script>
 
 <template>
@@ -64,7 +73,7 @@ const hasSearchData = computed(
         :key="item.key"
         :title="item.title"
         is-link
-        :to="item.to"
+        @click="handleGoFeature(item.to)"
       ></Cell>
     </CellGroup>
   </div>

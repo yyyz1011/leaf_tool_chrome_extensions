@@ -32,6 +32,11 @@ const routes: RouteItem[] = [
     name: 'path-convertor',
     component: () => import('@/views/format/FormatPathConvertor.vue')
   },
+  {
+    path: '/format-statistics',
+    name: 'statistics',
+    component: () => import('@/views/format/FormatStatistics.vue')
+  },
   // 以下路由废弃
   {
     path: '/tool-format-time',
