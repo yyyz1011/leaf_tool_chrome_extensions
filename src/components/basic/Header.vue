@@ -23,7 +23,7 @@ function handleBack() {
 </script>
 
 <template>
-  <NavBar :title="props.title">
+  <NavBar :title="props.title" fixed placeholder>
     <template #left>
       <img :src="BackNavigateIcon" class="back-icon" @click="handleBack" />
     </template>

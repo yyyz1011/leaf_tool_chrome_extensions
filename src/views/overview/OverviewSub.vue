@@ -11,7 +11,7 @@ const route = useRoute();
 const router = useRouter();
 
 const curOverviewInfo = computed(() =>
-  toolList.find((item) => item.key === route.query?.key)
+  toolList.find((item) => item.key === route.query?.key ?? 'string-format')
 );
 const curNavTitle = computed(() => curOverviewInfo.value?.title);
 const curSubToolList = computed(() => {
