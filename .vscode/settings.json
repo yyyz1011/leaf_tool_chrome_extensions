@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.requireConfig": true,
+  "eslint.enable": true, // eslint开启
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true // 代码保存使用eslint格式化
+  }
+}
