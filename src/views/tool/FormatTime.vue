@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Header from '@/components/basic/Header.vue';
 import {
   CellGroup,
   Cell,
@@ -14,6 +13,7 @@ import {
 } from 'vant';
 import dayjs from 'dayjs';
 import { ref, onUnmounted, onMounted } from 'vue';
+import Header from '@/components/basic/Header.vue';
 import { handleCopy } from '../../utils/copy';
 
 const timer = ref<any>(null);
@@ -76,9 +76,7 @@ function handleConfirmTime(val: any) {
 }
 
 function handleChangeToTime(val: any) {
-  console.log(formDate.value, formTime.value, val);
   const dateText = `${formDate.value.join('-')} ${formTime.value.join(':')}`;
-  console.log(dateText);
   if (val.formIsUnix === '1') {
     formRes.value = dayjs(dateText).unix().toString();
   } else {
