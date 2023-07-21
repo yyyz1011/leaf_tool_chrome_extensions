@@ -36,7 +36,7 @@ function transformFunc(str: string) {
 </script>
 
 <template>
-  <Header title="命名风格转换" back="overview-sub"></Header>
+  <Header title="命名风格转换"></Header>
   <ToolTabList v-model="active" :list="FormatNamingConvertorList"></ToolTabList>
   <FormatTransform
     title="变量"
