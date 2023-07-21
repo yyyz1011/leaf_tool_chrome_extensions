@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import Header from '@/components/basic/Header.vue';
 import { CellGroup, Cell, Form, Field, Radio, RadioGroup, Button } from 'vant';
 import dayjs from 'dayjs';
 import { ref, onUnmounted, onMounted, watch } from 'vue';
-import Header from '@/components/basic/Header.vue';
 import { handleCopy } from '../../utils/copy';
 
 const timer = ref<any>(null);
@@ -26,6 +26,7 @@ onUnmounted(() => {
 });
 
 function handleChangeToTime(val: any) {
+  console.log(val.formTime);
   if (val.formIsUnix === '1') {
     formRes.value = dayjs(Number(val.formTime) * 1000).format(
       'YYYY-MM-DD HH:mm:ss'

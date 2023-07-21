@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { showFailToast } from 'vant';
 import { toolList, STORAGE_KEY } from '@/consts/overview';
 import Header from '@/components/basic/Header.vue';
 import type { ToolChildrenItem } from '@/consts/overview';
@@ -20,6 +21,7 @@ const curSubToolList = computed(() => {
   const collectStorageList = JSON.parse(
     localStorage.getItem(STORAGE_KEY) ?? '[]'
   );
+  console.log(collectStorageList, curOverviewInfo.value?.children);
   curOverviewInfo.value?.children.forEach((item: any) => {
     if (collectStorageList.find((key: string) => key === item.key)) {
       collectItem.push(item);
@@ -31,6 +33,8 @@ const curSubToolList = computed(() => {
 });
 
 function linkFunc(val: any) {
+  showFailToast('功能开发中，敬请期待');
+  return;
   router.push({
     name: val.to
   });
