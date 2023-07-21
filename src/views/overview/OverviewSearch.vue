@@ -3,9 +3,9 @@ import { Search, Empty, CellGroup, Cell } from 'vant';
 import { ref, watch, computed } from 'vue';
 import pinyin from 'pinyin';
 import { debounce } from 'lodash-es';
+import { useRouter } from 'vue-router';
 import { toolList } from '@/consts/overview';
 import Header from '@/components/basic/Header.vue';
-import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
@@ -72,6 +72,7 @@ function handleGoFeature(pathName: string) {
         v-for="item in searchList"
         :key="item.key"
         :title="item.title"
+        :label="item.desc"
         is-link
         @click="handleGoFeature(item.to)"
       ></Cell>
