@@ -22,6 +22,11 @@ const routes: RouteItem[] = [
     name: 'overview-sub',
     component: () => import('@/views/overview/OverviewSub.vue')
   },
+  {
+    path: '/format-naming-convertor',
+    name: 'naming-convertor',
+    component: () => import('@/views/format/FormatNamingConvertor.vue')
+  },
   // 以下路由废弃
   {
     path: '/tool-format-time',
