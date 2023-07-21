@@ -52,14 +52,15 @@ export interface FormatPathInfoResp {
   pathName: string;
   fileName: string;
 }
+/**
+ * 获取路径信息
+ * @param filePath
+ * @returns FormatPathInfoResp
+ */
 export function formatPathInfo(filePath: string): FormatPathInfoResp {
-  // 将所有的 \ 替换为 /
   const normalizedPath = filePath.replace(/\\/g, '/');
-  // 使用 / 将路径分割为各个部分
   const pathParts = normalizedPath.split('/');
-  // 文件名是最后一部分
   const fileName = pathParts.pop() ?? '';
-  // 路径名是除了最后一部分的其他部分
   const pathName = pathParts.join('/');
   return {
     path: normalizedPath,
