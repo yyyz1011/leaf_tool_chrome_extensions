@@ -4,6 +4,7 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
+		"prepare": "husky install",
 		"dev": "vite",
 		"build": "vue-tsc && vite build",
 		"watch": "vue-tsc && vite build --watch",
@@ -12,7 +13,7 @@
 		"version": "changeset version && pnpm install",
 		"lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
 		"lint:prettier": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
-		"lint:stylelint": "stylelint  src/**/*.{vue,scss,css,sass,less} --fix"
+		"lint:style": "stylelint  src/**/*.{vue,scss,css,sass,less} --fix"
 	},
 	"dependencies": {
 		"@icon-park/vue-next": "^1.4.2",
@@ -42,6 +43,7 @@
 		"eslint-config-prettier": "^8.8.0",
 		"eslint-plugin-prettier": "^5.0.0",
 		"eslint-plugin-vue": "^9.15.1",
+		"husky": "^8.0.3",
 		"node-polyfill-webpack-plugin": "^2.0.1",
 		"postcss-html": "^1.5.0",
 		"postcss-scss": "^4.0.6",
