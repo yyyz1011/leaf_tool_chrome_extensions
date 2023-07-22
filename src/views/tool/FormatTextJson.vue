@@ -61,6 +61,6 @@ function handleCopy() {
 
 <style scoped lang="scss">
 .err-message {
-	color: rgb(255, 46, 46);
+	color: rgb(255 46 46);
 }
 </style>

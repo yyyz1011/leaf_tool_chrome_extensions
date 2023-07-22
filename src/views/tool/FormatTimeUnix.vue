@@ -94,6 +94,7 @@ watch(
 <style scoped lang="scss">
 .res-content {
 	margin-top: 8px;
+
 	&--content {
 		display: flex;
 		justify-content: space-between;

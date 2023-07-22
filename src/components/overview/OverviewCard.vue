@@ -92,8 +92,8 @@ function handleCollect() {
 .overview-card {
 	padding: 12px 8px;
 	margin: 0 16px 8px;
-	border-radius: 10px;
 	background: linear-gradient(145deg, #e6e6e6, $text-white);
+	border-radius: 10px;
 	box-shadow:
 		20px 20px 60px #d9d9d9,
 		-20px -20px 60px $text-white;

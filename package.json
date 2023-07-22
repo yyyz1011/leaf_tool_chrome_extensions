@@ -11,7 +11,8 @@
 		"changeset": "changeset",
 		"version": "changeset version && pnpm install",
 		"lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
-		"format": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\""
+		"lint:prettier": "prettier --write \"./**/*.{html,vue,ts,js,json,md}\"",
+		"lint:stylelint": "stylelint  src/**/*.{vue,scss,css,sass,less} --fix"
 	},
 	"dependencies": {
 		"@icon-park/vue-next": "^1.4.2",
@@ -42,10 +43,18 @@
 		"eslint-plugin-prettier": "^5.0.0",
 		"eslint-plugin-vue": "^9.15.1",
 		"node-polyfill-webpack-plugin": "^2.0.1",
+		"postcss-html": "^1.5.0",
+		"postcss-scss": "^4.0.6",
 		"prettier": "^3.0.0",
 		"rollup-plugin-polyfill-node": "^0.12.0",
 		"sass": "^1.63.6",
 		"sass-loader": "^13.3.2",
+		"stylelint": "^15.10.2",
+		"stylelint-config-html": "^1.1.0",
+		"stylelint-config-prettier": "^9.0.5",
+		"stylelint-config-standard": "^34.0.0",
+		"stylelint-order": "^6.0.3",
+		"stylelint-scss": "^5.0.1",
 		"typescript": "^4.9.3",
 		"unplugin-vue-components": "^0.25.1",
 		"vite": "^4.2.1",

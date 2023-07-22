@@ -106,8 +106,8 @@ function handleGoFeature(pathName: string) {
 }
 
 .description-text {
-	width: 200px;
 	display: flex;
+	width: 200px;
 	justify-content: center;
 	align-items: center;
 }
