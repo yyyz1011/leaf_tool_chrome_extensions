@@ -6,12 +6,12 @@ const router = useRouter();
 
 const currentPage = localStorage.getItem(ROUTER_STORAGE_KEY);
 if (currentPage && currentPage !== '/') {
-  router.push(currentPage);
+	router.push(currentPage);
 }
 </script>
 
 <template>
-  <router-view></router-view>
+	<router-view></router-view>
 </template>
 
 <style scoped lang="scss">

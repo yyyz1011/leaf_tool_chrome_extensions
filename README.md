@@ -6,13 +6,13 @@ LeafTool is a Google Chrome extension designed to offer string processing, encry
 
 ## Key Features
 
-* **String Processing** - LeafTool comes with a variety of string processing tools that assist you in easily replacing, splitting, and merging strings.
+- **String Processing** - LeafTool comes with a variety of string processing tools that assist you in easily replacing, splitting, and merging strings.
 
-* **Encryption and Decryption Tools** - LeafTool offers a range of encryption and decryption tools such as MD5, SHA1, Base64, etc.
+- **Encryption and Decryption Tools** - LeafTool offers a range of encryption and decryption tools such as MD5, SHA1, Base64, etc.
 
-* **Data Generation Tools** - LeafTool allows you to quickly and conveniently generate various types of test data, such as UUID, random numbers, random characters, etc.
+- **Data Generation Tools** - LeafTool allows you to quickly and conveniently generate various types of test data, such as UUID, random numbers, random characters, etc.
 
-* **Format Conversion, Encoding and Decoding Operations** - LeafTool supports conversion between various formats such as JSON, XML, CSV, etc., and provides encoding and decoding operations.
+- **Format Conversion, Encoding and Decoding Operations** - LeafTool supports conversion between various formats such as JSON, XML, CSV, etc., and provides encoding and decoding operations.
 
 ## Installation
 
