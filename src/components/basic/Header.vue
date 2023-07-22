@@ -2,6 +2,7 @@
 import { NavBar } from 'vant';
 import { useRouter } from 'vue-router';
 import { ArrowLeft } from '@icon-park/vue-next';
+import { defineProps } from 'vue';
 
 const router = useRouter();
 const props = defineProps({
