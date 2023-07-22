@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { NavBar } from 'vant';
 import { useRouter } from 'vue-router';
-import BackNavigateIcon from '@/assets/icon/back_navigate.png';
+import { ArrowLeft } from '@icon-park/vue-next';
 
 const router = useRouter();
 const props = defineProps({
@@ -25,7 +25,7 @@ function handleBack() {
 <template>
   <NavBar :title="props.title" fixed placeholder>
     <template #left>
-      <img :src="BackNavigateIcon" class="back-icon" @click="handleBack" />
+      <ArrowLeft @click="handleBack"></ArrowLeft>
     </template>
   </NavBar>
 </template>

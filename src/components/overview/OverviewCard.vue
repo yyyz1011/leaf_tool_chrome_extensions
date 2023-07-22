@@ -3,8 +3,7 @@ import { ref } from 'vue';
 import { showToast } from 'vant';
 import { clone } from 'lodash-es';
 import { useRouter } from 'vue-router';
-import LikeIcon from '@/assets/icon/like.png';
-import LikeActiveIcon from '@/assets/icon/like_active.png';
+import { Like } from '@icon-park/vue-next';
 import { STORAGE_KEY } from '@/consts/overview';
 
 const props = defineProps({
@@ -75,13 +74,13 @@ function handleCollect() {
   <div class="overview-card" @click="handleGoSubPage">
     <div class="overview-card--header">
       <div class="title">{{ props.index }} {{ props.info.title }}</div>
-      <img
-        v-if="active"
-        class="like"
-        :src="LikeActiveIcon"
+      <Like v-if="!active" @click.stop="handleCollect"></Like>
+      <Like
+        v-else
+        theme="filled"
+        fill="rgb(253, 90, 90)"
         @click.stop="handleCollect"
-      />
-      <img v-else class="like" :src="LikeIcon" @click.stop="handleCollect" />
+      ></Like>
     </div>
     <div class="overview-card--content">
       <div class="desc">{{ props.info.desc }}</div>
@@ -105,10 +104,6 @@ function handleCollect() {
     .title {
       font-size: 14px;
       font-weight: 600;
-    }
-
-    .like {
-      width: 15px;
     }
   }
 

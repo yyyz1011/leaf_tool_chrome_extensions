@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@changesets/changelog-github': ^0.4.8
   '@changesets/cli': ^2.26.2
+  '@icon-park/vue-next': ^1.4.2
   '@metamask/post-message-stream': ^6.1.1
   '@metamask/providers': ^10.2.1
   '@samrum/vite-plugin-web-extension': ^3.1.1
@@ -38,6 +39,7 @@ specifiers:
   webextension-polyfill: ^0.10.0
 
 dependencies:
+  '@icon-park/vue-next': 1.4.2_vue@3.2.47
   '@metamask/post-message-stream': 6.1.1
   '@metamask/providers': 10.2.1
   dayjs: 1.11.9
@@ -582,6 +584,15 @@ packages:
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
+
+  /@icon-park/vue-next/1.4.2_vue@3.2.47:
+    resolution: {integrity: sha512-+QklF255wkfBOabY+xw6FAI0Bwln/RhdwCunNy/9sKdKuChtaU67QZqU67KGAvZUTeeBgsL+yaHHxqfQeGZXEQ==}
+    engines: {node: '>= 8.0.0', npm: '>= 5.0.0'}
+    peerDependencies:
+      vue: 3.x
+    dependencies:
+      vue: 3.2.47
+    dev: false
 
   /@jridgewell/sourcemap-codec/1.4.14:
     resolution: {integrity: sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==}

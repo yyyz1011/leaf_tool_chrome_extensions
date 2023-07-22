@@ -8,10 +8,10 @@ import {
   showSuccessToast,
   showFailToast
 } from 'vant';
+import { Copy } from '@icon-park/vue-next';
 import Header from '@/components/basic/Header.vue';
 import { formatPathInfo } from '@/utils/format';
 import type { FormatPathInfoResp } from '@/utils/format';
-import CopyIcon from '@/assets/icon/copy.png';
 import { handleCopy } from '@/utils/copy';
 
 const pathVal = ref<string>('');
@@ -56,30 +56,27 @@ function handleDealPath() {
     >
       <Cell title="完整路径">
         {{ item.path }}
-        <img
+        <Copy
           v-if="item.path"
           class="copy-icon"
-          :src="CopyIcon"
           @click="() => handleCopy(item.path)"
-        />
+        ></Copy>
       </Cell>
       <Cell title="文件路径">
         {{ item.pathName }}
-        <img
+        <Copy
           v-if="item.pathName"
           class="copy-icon"
-          :src="CopyIcon"
           @click="() => handleCopy(item.pathName)"
-        />
+        ></Copy>
       </Cell>
       <Cell title="文件名">
         {{ item.fileName }}
-        <img
+        <Copy
           v-if="item.fileName"
           class="copy-icon"
-          :src="CopyIcon"
           @click="() => handleCopy(item.fileName)"
-        />
+        ></Copy>
       </Cell>
     </CellGroup>
   </template>
@@ -87,7 +84,6 @@ function handleDealPath() {
 
 <style scoped lang="scss">
 .copy-icon {
-  width: 10px;
   margin-left: 4px;
 }
 </style>

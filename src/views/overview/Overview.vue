@@ -2,9 +2,9 @@
 import { ref } from 'vue';
 import { NavBar } from 'vant';
 import { useRouter } from 'vue-router';
+import { Search } from '@icon-park/vue-next';
 import { toolList, STORAGE_KEY } from '@/consts/overview';
 import type { ToolChildrenItem } from '@/consts/overview';
-import SearchIcon from '@/assets/icon/search.png';
 import OverviewCard from '@/components/overview/OverviewCard.vue';
 import NewFeatureTip from '@/components/basic/NewFeatureTip.vue';
 
@@ -39,7 +39,7 @@ function handleGoSearch() {
 <template>
   <NavBar fixed placeholder safe-area-inset-top title="LeafTool工具库">
     <template #right>
-      <img class="search-icon" :src="SearchIcon" @click="handleGoSearch" />
+      <Search @click="handleGoSearch"></Search>
     </template>
   </NavBar>
   <div v-for="(item, index) in list" :key="item.key" class="overview-wrapper">
@@ -49,12 +49,6 @@ function handleGoSearch() {
 </template>
 
 <style lang="scss" scoped>
-.search-icon {
-  width: 15px;
-  height: 15px;
-  cursor: pointer;
-}
-
 .overview-wrapper {
   margin-top: 12px;
 }

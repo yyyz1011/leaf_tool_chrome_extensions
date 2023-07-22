@@ -12,6 +12,7 @@
     "version": "changeset version && pnpm install"
   },
   "dependencies": {
+    "@icon-park/vue-next": "^1.4.2",
     "@metamask/post-message-stream": "^6.1.1",
     "@metamask/providers": "^10.2.1",
     "dayjs": "^1.11.9",
