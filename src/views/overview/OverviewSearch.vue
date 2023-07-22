@@ -3,8 +3,11 @@ import { Search, Empty, CellGroup, Cell } from 'vant';
 import { ref, watch, computed } from 'vue';
 import pinyin from 'pinyin';
 import { debounce } from 'lodash-es';
+import { useRouter } from 'vue-router';
 import { toolList } from '@/consts/overview';
 import Header from '@/components/basic/Header.vue';
+
+const router = useRouter();
 
 const searchVal = ref('');
 const list = ref<any>([]);
@@ -51,6 +54,12 @@ const isNoSearchData = computed(
 const hasSearchData = computed(
   () => searchVal.value && searchList.value.length > 0
 );
+
+function handleGoFeature(pathName: string) {
+  router.push({
+    name: pathName
+  });
+}
 </script>
 
 <template>
@@ -63,8 +72,9 @@ const hasSearchData = computed(
         v-for="item in searchList"
         :key="item.key"
         :title="item.title"
+        :label="item.desc"
         is-link
-        :to="item.to"
+        @click="handleGoFeature(item.to)"
       ></Cell>
     </CellGroup>
   </div>

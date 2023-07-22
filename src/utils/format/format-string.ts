@@ -68,3 +68,32 @@ export function formatPathInfo(filePath: string): FormatPathInfoResp {
     fileName
   };
 }
+
+export interface FormatTextInfoResp {
+  text: string;
+  textLength: number;
+  countPunctuation: number;
+  keywords: string[];
+  paragraphs: number;
+  englishCount: number;
+  chineseCount: number;
+}
+/**
+ * 获取文本相关信息
+ * @param text
+ * @returns
+ */
+export function formatTextInfo(text: string): FormatTextInfoResp {
+  const keywords = text.match(/[^\s\w]+(?=[\w\s]+)/g) ?? [];
+  const resKeywords = keywords.map((keyword) => keyword.toLowerCase());
+
+  return {
+    text,
+    textLength: text.length,
+    countPunctuation: (text.match(/[!?.,;:！？。，；：]/g) || []).length,
+    keywords: resKeywords,
+    paragraphs: text.split(/\n/).length,
+    englishCount: (text.match(/[A-Za-z]+/g) || []).length,
+    chineseCount: (text.match(/[^\x00-\xff]/g) || []).length
+  };
+}

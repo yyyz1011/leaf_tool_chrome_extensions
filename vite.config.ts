@@ -72,6 +72,7 @@ export default ({ mode, command }) => {
             './src/views/overview/OverviewSub.vue',
             './src/views/format/FormatNamingConvertor.vue',
             './src/views/format/FormatPathConvertor.vue',
+            './src/views/format/FormatStatistics.vue',
             //
             './src/views/tool/FormatTime.vue',
             './src/views/tool/FormatTimeUnix.vue',
