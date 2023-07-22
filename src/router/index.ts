@@ -23,6 +23,11 @@ const routes: RouteItem[] = [
 		component: () => import('@/views/overview/OverviewSub.vue')
 	},
 	{
+		path: '/setting',
+		name: 'setting',
+		component: () => import('@/views/account/Setting.vue')
+	},
+	{
 		path: '/format-naming-convertor',
 		name: 'naming-convertor',
 		component: () => import('@/views/format/FormatNamingConvertor.vue')

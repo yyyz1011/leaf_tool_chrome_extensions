@@ -1,0 +1,36 @@
+@import './theme/dark.scss';
+@import './theme/light.scss';
+
+@mixin bg_color() {
+	[data-theme='light'] & {
+		background-color: $bg-light;
+	}
+	[data-theme='dark'] & {
+		background-color: $bg-dark;
+	}
+}
+
+@mixin text_color {
+	[data-theme='light'] & {
+		color: $text-primary-light;
+	}
+	[data-theme='dark'] & {
+		color: $text-primary-dark;
+	}
+}
+
+@mixin overview_card_shadow {
+	border-radius: 10px;
+	[data-theme='light'] & {
+		background: linear-gradient(145deg, #e6e6e6, #ffffff);
+		box-shadow:
+			2px 2px 6px #d9d9d9,
+			-2px -2px 6px #ffffff;
+	}
+	[data-theme='dark'] & {
+		background: #383838;
+		box-shadow:
+			2px 2px 6px #303030,
+			-2px -2px 6px #404040;
+	}
+}

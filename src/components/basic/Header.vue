@@ -25,15 +25,13 @@ function handleBack() {
 <template>
 	<NavBar :title="props.title" fixed placeholder>
 		<template #left>
-			<ArrowLeft @click="handleBack"></ArrowLeft>
+			<ArrowLeft class="icon" @click="handleBack"></ArrowLeft>
 		</template>
 	</NavBar>
 </template>
 
 <style scoped lang="scss">
-.back-icon {
-	width: 15px;
-	height: 15px;
-	cursor: pointer;
+.icon {
+	@include text_color();
 }
 </style>
