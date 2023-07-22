@@ -7,7 +7,6 @@
 	"plugins": ["stylelint-order", "stylelint-scss"],
 	"customSyntax": "postcss-html",
 	"rules": {
-		"indentation": 2,
 		"selector-class-pattern": null,
 		"selector-pseudo-class-no-unknown": [
 			true,

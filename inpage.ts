@@ -9,23 +9,23 @@ let __define;
  * AMD's define function
  */
 const cleanContextForImports = () => {
-	__define = global.define;
-	try {
-		global.define = undefined;
-	} catch (_) {
-		console.warn('MetaMask - global.define could not be deleted.');
-	}
+  __define = global.define;
+  try {
+    global.define = undefined;
+  } catch (_) {
+    console.warn('MetaMask - global.define could not be deleted.');
+  }
 };
 
 /**
  * Restores global define object from cached reference
  */
 const restoreContextAfterImports = () => {
-	try {
-		global.define = __define;
-	} catch (_) {
-		console.warn('MetaMask - global.define could not be overwritten.');
-	}
+  try {
+    global.define = __define;
+  } catch (_) {
+    console.warn('MetaMask - global.define could not be overwritten.');
+  }
 };
 
 cleanContextForImports();
@@ -50,14 +50,14 @@ log.setDefaultLevel(process.env.METAMASK_DEBUG ? 'debug' : 'warn');
 // if (shouldInjectProvider()) {
 // setup background connection
 const metamaskStream = new LocalMessageDuplexStream({
-	name: 'inpage',
-	target: 'contentscript'
+  name: 'inpage',
+  target: 'contentscript'
 });
 
 initializeProvider({
-	connectionStream: metamaskStream,
-	logger: log,
-	shouldShimWeb3: true
+  connectionStream: metamaskStream,
+  logger: log,
+  shouldShimWeb3: true
 });
 const { ethereum } = window as never;
 console.log(ethereum);

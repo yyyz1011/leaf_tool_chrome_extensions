@@ -14,6 +14,6 @@ app.use(router);
 app.mount('#app');
 
 router.beforeEach((to, from, next) => {
-	localStorage.setItem(ROUTER_STORAGE_KEY, to.fullPath);
-	next();
+  localStorage.setItem(ROUTER_STORAGE_KEY, to.fullPath);
+  next();
 });
