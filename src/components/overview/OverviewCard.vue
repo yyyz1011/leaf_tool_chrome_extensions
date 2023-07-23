@@ -90,15 +90,14 @@ function handleCollect() {
 
 <style scoped lang="scss">
 .overview-card {
+	@include overview_card_shadow();
+
 	padding: 12px 8px;
 	margin: 0 16px 8px;
-	background: linear-gradient(145deg, #e6e6e6, $text-white);
-	border-radius: 10px;
-	box-shadow:
-		20px 20px 60px #d9d9d9,
-		-20px -20px 60px $text-white;
 
 	&--header {
+		@include text_color();
+
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -110,6 +109,8 @@ function handleCollect() {
 	}
 
 	&--content {
+		@include text_color();
+
 		padding-top: 12px;
 
 		.desc {

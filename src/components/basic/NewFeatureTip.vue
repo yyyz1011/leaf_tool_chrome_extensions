@@ -12,10 +12,11 @@
 
 <style scoped lang="scss">
 .tip {
+	@include text_color();
+
 	display: flex;
 	padding: 8px 0 16px;
 	font-size: 10px;
-	color: $primary-color;
 	justify-content: center;
 	align-items: center;
 }
