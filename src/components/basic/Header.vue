@@ -23,9 +23,9 @@ function handleBack() {
 </script>
 
 <template>
-	<NavBar :title="props.title" fixed placeholder>
+	<NavBar :title="props.title" fixed placeholder @click-left="handleBack">
 		<template #left>
-			<ArrowLeft class="icon" @click="handleBack"></ArrowLeft>
+			<ArrowLeft class="icon"></ArrowLeft>
 		</template>
 	</NavBar>
 </template>

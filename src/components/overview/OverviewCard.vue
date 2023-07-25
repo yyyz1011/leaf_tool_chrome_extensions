@@ -94,6 +94,7 @@ function handleCollect() {
 
 	padding: 12px 8px;
 	margin: 0 16px 8px;
+	cursor: pointer;
 
 	&--header {
 		@include text_color();
@@ -101,6 +102,7 @@ function handleCollect() {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		user-select: none;
 
 		.title {
 			font-size: 14px;
@@ -112,6 +114,7 @@ function handleCollect() {
 		@include text_color();
 
 		padding-top: 12px;
+		user-select: none;
 
 		.desc {
 			font-size: 10px;
